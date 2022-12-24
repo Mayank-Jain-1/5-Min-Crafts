@@ -7,8 +7,8 @@
 body{
   max-width: 1800px;
   margin: auto;
-  width: 70%;
-  background-color: purple;
+  width: 80%;
+  background-color: rgb(196, 3, 196);
 }
 
 .main-heading{
@@ -16,5 +16,45 @@ body{
   font-size: 4rem;
   text-align: center;
   text-shadow: -2px 2px 2px orange;
-
 } 
+
+.main-image{
+  display: block;
+  border: 10px solid black;
+  margin: 2rem auto;
+}
+
+.links{
+  background-color: orange;
+  padding: 10px 20px;
+}
+
+.link{
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.welcome-heading{
+  background-color: orange;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-shadow: -2px 2px 2px yellow;
+}
+
+.desc{
+  background-color: orange;
+  margin-top: 2rem;
+  padding: 20px;
+  font-size: large;
+}
+
+.fav-img{
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-left: 25px;
+}
