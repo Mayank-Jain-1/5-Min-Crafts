@@ -43,11 +43,11 @@ function App() {
             <button
               onClick={toggleHamburger}
               id="hamburger"
-              className="h-[14px] mr-[38px] relative"
+              className="h-[14px] w-[18px] mr-[38px] relative"
             >
-              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-0 "></div>
-              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-[8px]"></div>
-              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-[16px]"></div>
+              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-0  duration-200"></div>
+              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-[8px] duration-200"></div>
+              <div className="w-[18px] h-0 border-[1px] border-black bg-black absolute top-[16px] duration-200"></div>
             </button>
             <img src={logo} alt="" className="w-32" />
           </div>
