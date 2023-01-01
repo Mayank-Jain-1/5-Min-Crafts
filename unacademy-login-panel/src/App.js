@@ -33,7 +33,7 @@ function App() {
 
       <button onClick={togglePanel} id='backdrop' className=" fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 hidden opacity-0 duration-200 z-10 cursor-default">
       </button>
-      <div id='panel' className="absolute right-0 top-0 w-[663px] h-full bg-white py-[30px] px-[35px] translate-x-[1000px] duration-300 z-20 max-w-[100vw]">
+      <div id='panel' className="absolute right-0 top-0 w-[663px] h-full bg-white py-[30px] px-[35px] translate-x-[1000px] duration-300 z-20 max-w-[100vw] hidden">
           <button onClick={togglePanel}>
             <img src={cross} alt="" className="w-8"/>
           </button>
