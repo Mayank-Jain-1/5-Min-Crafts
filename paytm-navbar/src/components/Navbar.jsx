@@ -4,13 +4,17 @@ import Hamburger from "./Hamburger";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  
+  function toggleisOpen() {
+    isOpen ? setIsOpen(false) : setIsOpen(true)
+  }
+  console.log(isOpen);
 
   return (
     <>
+    <button onClick={toggleisOpen}>CLock</button>
       <nav className="flex items-center p-12 justify-between border-2 shadow-lg">
       
-        <Hamburger width='5' className="mr-9" />
+        <Hamburger width='5' className="mr-9 lg:hidden" flag={isOpen} setFlag={setIsOpen}/>
 
         <img src={logo} alt="paytm logo" className="w-44" />
         <ul className="hidden lg:flex font-semibold space-x-6 text-base">
