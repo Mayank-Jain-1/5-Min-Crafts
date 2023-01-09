@@ -38,9 +38,9 @@ function App() {
             <div className="bg-white w-[26px] h-[26px] rounded-full absolute bottom-[-15px]"></div>
           </div>
         </button>
-      </nav> */}
+      </nav>
 
-      {/* <nav className="lg:hidden block">
+      <nav className="lg:hidden block">
         <div className="flex items-center justify-between sm:px-5 px-[5px] py-[10px] shadow-lg">
           <div className="flex items-center ">
             <button

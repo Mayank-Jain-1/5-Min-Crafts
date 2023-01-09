@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import logo from "../media/paytm_logo.png";
 import Hamburger from "./Hamburger";
+import SignInBtn from "./SignInBtn";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  function toggleisOpen() {
-    isOpen ? setIsOpen(false) : setIsOpen(true)
-  }
-  console.log(isOpen);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-    <button onClick={toggleisOpen}>CLock</button>
-      <nav className="flex items-center p-12 justify-between border-2 shadow-lg">
-      
-        <Hamburger width='5' className="mr-9 lg:hidden" flag={isOpen} setFlag={setIsOpen}/>
-
-        <img src={logo} alt="paytm logo" className="w-44" />
+      <nav className="flex items-center p-3 lg:p-12 justify-between border-2 shadow-lg">
+        <div className="flex items-center">
+          <Hamburger
+            width="5"
+            className="mr-9 lg:hidden"
+            flag={isOpen}
+            setFlag={setIsOpen}
+          />
+          <img src={logo} alt="paytm logo" className="w-44" />
+        </div>
         <ul className="hidden lg:flex font-semibold space-x-6 text-base">
           <li>
             <a href="">Paytm for Consumer</a>
@@ -34,13 +35,14 @@ const Navbar = () => {
             <a href="">Career</a>
           </li>
         </ul>
-        <button className="bg-[#00BAF2] text-white px-[10px] py-[3px] flex items-center text-[15px] font-semibold rounded-3xl">
+        <SignInBtn/>
+        {/* <button className="bg-[#00BAF2] text-white px-[10px] py-[3px] flex items-center text-[15px] font-semibold rounded-3xl">
           Sign In
           <div className="bg-[#002970] w-[34px] h-[34px] rounded-full ml-2 relative flex items-center justify-center overflow-hidden ">
             <div className="bg-white w-4 h-4 rounded-full"></div>
             <div className="bg-white w-[26px] h-[26px] rounded-full absolute bottom-[-15px]"></div>
           </div>
-        </button>
+        </button> */}
       </nav>
     </>
   );
