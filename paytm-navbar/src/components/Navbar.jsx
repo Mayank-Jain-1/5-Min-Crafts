@@ -9,8 +9,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="flex items-center p-12 justify-between border-2 shadow-lg">
-        
-        <Hamburger width='5' height='3'  />
+      
+        <Hamburger width='5' className="mr-9" />
 
         <img src={logo} alt="paytm logo" className="w-44" />
         <ul className="hidden lg:flex font-semibold space-x-6 text-base">

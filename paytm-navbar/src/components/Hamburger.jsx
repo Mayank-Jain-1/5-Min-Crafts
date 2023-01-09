@@ -1,15 +1,16 @@
 import React from "react";
+import Line from "./Line";
 
 const Hamburger = (props) => {
-  const {width,height,flag} = props
+  const {width,flag,className} = props
+  const flag1 = true;
   return (
     <button
-      id="hamburger"
-      className={`lg:hidden h-[14px] w-${width} mr-[38px] relative`}
+      className={`h-4 w-${width} relative ${className}`}
     >
-      <div className={`w-${width} h-0 border-y border-black absolute top-0  duration-200`}></div>
-      <div className={`w-${width} h-0 border-y border-black absolute top-[${height*4}px] duration-200`}></div>
-      <div className={`w-${width} h-0 border-y border-black absolute top-[${height*8}px] duration-200`}></div>
+      <Line width={width} className={`top-0 ${ flag1 &&  "rotate-[135deg] translate-y-2" }`} />
+      <Line width={width} className={`top-2 ${ flag1 &&  "scale-0" }`} />
+      <Line width={width} className={`top-4 ${ flag1 &&  "rotate-45 -translate-y-2" }`} />
     </button>
   );
 };
