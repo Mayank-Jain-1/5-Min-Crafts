@@ -1,16 +1,14 @@
-import React from 'react'
-import AccountImg from './AccountImg'
+import React from "react";
+import AccountImg from "./AccountImg";
+import Circle from "./Circle";
 
 const SignInBtn = () => {
   return (
-    <a href='https://google.com' className="bg-skyBlue text-white px-3 py-1 flex items-center text-base font-semibold rounded-3xl cursor-pointer">
-    Sign In
-    
-    <AccountImg className='ml-2'/>
+    <button className="bg-skyBlue text-white px-3 py-1 flex items-center text-base font-semibold rounded-3xl">
+      Sign In
+      <AccountImg className="ml-2" />
+    </button>
+  );
+};
 
-    
-  </a>
-  )
-}
-
-export default SignInBtn
+export default SignInBtn;
