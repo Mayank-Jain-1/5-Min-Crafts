@@ -2,7 +2,7 @@ import React from 'react'
 
 const Circle = (props) => {
   const {dia, color, className} = props
-  const style = `bg-${color} w-${dia} h-${dia} rounded-full ${className}`
+  const style = ` bg-${color} w-${dia} h-${dia} rounded-full ${className} `
   return (
     <>
     <div className={style}>{props.children}</div>
@@ -12,8 +12,7 @@ const Circle = (props) => {
 
 Circle.defaultProps = {
   dia : 7,
-  color: "white",
-  className: ""
+  color: "black",
 }
 
 export default Circle

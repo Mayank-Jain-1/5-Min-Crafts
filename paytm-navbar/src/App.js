@@ -1,12 +1,7 @@
-import logo from "./media/paytm_logo.png";
 import "./App.css";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const toggleHamburger = () => {
-    document.getElementById('hamburger').classList.toggle('open')
-    document.getElementById('navLinks').classList.toggle('hidden')
-  };
 
   return (
     <>
