@@ -1,15 +1,18 @@
 import logo from "./media/paytm_logo.png";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   const toggleHamburger = () => {
-    const hamburger = document.getElementById('hamburger').classList.toggle('open')
-    const navlinks = document.getElementById('navLinks').classList.toggle('hidden')
+    document.getElementById('hamburger').classList.toggle('open')
+    document.getElementById('navLinks').classList.toggle('hidden')
   };
 
   return (
     <>
-      <nav className="hidden lg:flex items-center p-12 justify-between border-2 shadow-lg">
+    <Navbar/>
+    
+      {/* <nav className="hidden lg:flex items-center p-12 justify-between border-2 shadow-lg">
         <img src={logo} alt="paytm logo" className="w-44" />
         <ul className="flex font-semibold space-x-[23px] text-[17px]">
           <li>
@@ -35,9 +38,9 @@ function App() {
             <div className="bg-white w-[26px] h-[26px] rounded-full absolute bottom-[-15px]"></div>
           </div>
         </button>
-      </nav>
+      </nav> */}
 
-      <nav className="lg:hidden block">
+      {/* <nav className="lg:hidden block">
         <div className="flex items-center justify-between sm:px-5 px-[5px] py-[10px] shadow-lg">
           <div className="flex items-center ">
             <button
@@ -60,9 +63,7 @@ function App() {
           </button>
         </div>
         <ul id="navLinks" className="hidden font-semibold space-y-[31px] space-x-[20px] text-[17px]">
-
-          {/* You can also get the desired result by just adding an empty li item which wont have the space-x and space-y. This is becuase space-x and space-y starts from the 2nd element in the list */}
-          {/* <li></li> */}
+          
           <li className="px-[20px] pt-[38px]">
             <a href="">Investor Relations</a>
           </li>
@@ -73,7 +74,7 @@ function App() {
             <a href="">Career</a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 }
