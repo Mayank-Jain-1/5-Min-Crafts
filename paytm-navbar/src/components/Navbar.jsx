@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex items-center p-3 lg:p-10 justify-between border-2 shadow-lg">
+      <div className="flex items-center p-3 lg:p-7 justify-between border-2 shadow-lg">
         <div className="flex items-center">
           <Hamburger
             width="5"
