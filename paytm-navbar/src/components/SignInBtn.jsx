@@ -1,6 +1,5 @@
 import React from "react";
 import AccountImg from "./AccountImg";
-import Circle from "./Circle";
 
 const SignInBtn = () => {
   return (

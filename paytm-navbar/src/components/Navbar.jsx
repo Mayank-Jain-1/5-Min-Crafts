@@ -19,24 +19,10 @@ const Navbar = () => {
           />
           <img src={logo} alt="paytm logo" className="w-32 lg:w-44" />
         </div>
-        <Navlinks className='hidden lg:flex'/>
+        <Navlinks className="hidden lg:flex" />
         <SignInBtn />
       </div>
-      {isOpen && 
-      <Navlinks className='lg:hidden space-y-7'/>
-      }
-      {/* <ul className={` font-semibold space-y-[31px] space-x-[20px] text-[17px]`}>
-          
-          <li className="px-[20px] pt-[38px]">
-            <a href="">Investor Relations</a>
-          </li>
-          <li>
-            <a href="">Company</a>
-          </li>
-          <li>
-            <a href="">Career</a>
-          </li>
-        </ul> */}
+      {isOpen && <Navlinks className="lg:hidden space-y-7" />}
     </nav>
   );
 };

@@ -1,16 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Line = (props) => {
-  const {width, className} = props
-  const classes = `w-${width} h-0 bg-black border-y border-black absolute duration-200 ${className}` 
+  const { width, className } = props;
+  const classes = `w-${width} h-0 bg-black border-y border-black absolute duration-200 ${className}`;
 
-  return (
-    <div className={classes}></div>
-  )
-}
+  return <div className={classes}></div>;
+};
 
 Line.defaultProps = {
-  width: "5"
-}
+  width: "5",
+};
 
-export default Line
+export default Line;
