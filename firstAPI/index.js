@@ -1,7 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const restaurants = JSON.parse(fs.readFileSync("./restaurantdata.txt", "utf8"));
-const mealtypes = JSON.parse(fs.readFileSync("./restaurantdata.txt", "utf8"));
+const mealtypes = JSON.parse(fs.readFileSync("./mealtype.txt", "utf8"));
 
 const placeFilter = (place) => {
   return restaurants.filter(
