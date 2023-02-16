@@ -24,6 +24,7 @@ app.get("/mealtypes", (req, res) => {
 
 app.get("/filter", (req, res) => {
   const defaultFilter = {
+    city: "",
     cuisinesarr: null,
     minCost: 0,
     maxCost: Number.MAX_VALUE,
@@ -31,13 +32,14 @@ app.get("/filter", (req, res) => {
     pageSize: 4,
   };
 
-  let { cuisinesarr, cost, sort, page, pageSize } = req.query;
+  let { city, cuisinesarr, cost, sort, page, pageSize } = req.query;
   cuisinesarr = cuisinesarr
     ? cuisinesarr.toLowerCase().split("-")
     : defaultFilter.cuisinesarr;
 
   let minCost = defaultFilter.minCost,
     maxCost = defaultFilter.maxCost;
+  city = city ? city.toLowerCase() : defaultFilter.city;
   page = page ? page : defaultFilter.page;
   pageSize = pageSize ? pageSize : defaultFilter.pageSize;
 
@@ -59,12 +61,13 @@ app.get("/filter", (req, res) => {
 
   const resultData = restaurants.filter((restaurant) => {
     return (
+      minCost <= restaurant.cost &&
+      restaurant.cost <= maxCost &&
       (!cuisinesarr ||
         restaurant.Cuisine.some((cuisine) =>
           cuisinesarr.includes(cuisine.name.toLowerCase())
         )) &&
-      minCost <= restaurant.cost &&
-      restaurant.cost <= maxCost
+      (!city || restaurant.city_name.toLowerCase() === city)
     );
   });
 
