@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 app.get("/search/:city_name", (req, res) => {
   res.send(placeFilter(req.params.city_name));
 });
+
 app.get("/mealtypes", (req, res) => {
   res.send(mealtypes);
 });
